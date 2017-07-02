@@ -6165,3 +6165,11 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+div#loading {
+    width: 35px;
+    height: 35px;
+    display: none;
+    background: url(/static/css/loading.gif) no-repeat;
+    cursor: wait;
+}
