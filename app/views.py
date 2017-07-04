@@ -17,9 +17,10 @@ def prereg():
 		username = request.form['username']
 		# Check that username has not already been searched (not a great query, but works)
 		try:
-			score = check_tweets(username)[0]
+                    pos_score = check_tweets(username)[0]
+                    neg_score = check_tweets(username)[1]
 		except TweepError:
 			score = "Sorry this username does not exist"
 		return render_template('success.html',
-					        score=score)
+					        pos_score=pos_score, neg_score=neg_score)
 	return render_template('index.html')

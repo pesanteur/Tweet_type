@@ -24,7 +24,7 @@
                 <br>
                 <br>
                 <br>
-                <div id="loading"></div>
+                <div id="loading"><img src="{{url_for('static', filename='loading.gif')}}"></div>
                 <div id="content">
                     <form class="col-lg-12" action="{{url_for('prereg')}}" method="POST">
                         <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
@@ -55,6 +55,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+       <script type="text/javascript">// <![CDATA[
+         function loading(){
+            $("#loading").show(); 
+            $("#content").hide();
+         }
+     //]] </script>
 </body>
 
 </html>

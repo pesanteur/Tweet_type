@@ -27,4 +27,7 @@ def check_tweets(username):
     pos_score = sum(pos_stats)/len(pos_stats)
     neg_score = sum(neg_stats)/len(neg_stats)
 
+    pos_score = format(pos_score, '.2f') # changes this to a more human readable format
+    neg_score = format(neg_score, '.2f')
+
     return pos_score, neg_score
